@@ -1,3 +1,3 @@
 ## Contributions 
 - GitHub workflow.
-- Dataset research and justification. 
+- Dataset research and justification.
