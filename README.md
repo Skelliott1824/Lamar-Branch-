@@ -1,2 +1,3 @@
 ## Contributions 
-- Cyprian Albano created a Streamlit app.
+- GitHub workflow.
+- Dataset research and justification. 
