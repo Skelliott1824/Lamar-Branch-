@@ -1,18 +1,56 @@
-#include<stdio.h>
-int main(){
-  printf("hello world");
-  return 0;
+#include <stdio.h>
 
-  int num1, num2, sum; // Declare integer variables
+int main() {
+    int choice;
+    double num1, num2, result;
 
-    printf("Enter first number: ");
-    scanf("%d", &num1); // Read first integer from user
+    while (1) {
+        printf("\n=== Simple Calculator ===\n");
+        printf("1. Add\n");
+        printf("2. Subtract\n");
+        printf("3. Multiply\n");
+        printf("4. Divide\n");
+        printf("5. Exit\n");
+        printf("Choose an option: ");
+        scanf("%d", &choice);
 
-    printf("Enter second number: ");
-    scanf("%d", &num2); // Read second integer from user
+        if (choice == 5) {
+            printf("Goodbye!\n");
+            break;
+        }
 
-    sum = num1 + num2; // Calculate the sum
+        printf("Enter first number: ");
+        scanf("%lf", &num1);
+        printf("Enter second number: ");
+        scanf("%lf", &num2);
 
-    printf("The sum of %d and %d is %d\n", num1, num2, sum); // Display the result
+        switch (choice) {
+            case 1:
+                result = num1 + num2;
+                printf("Result: %.2lf\n", result);
+                break;
+            case 2:
+                result = num1 - num2;
+                printf("Result: %.2lf\n", result);
+                break;
+            case 3:
+                result = num1 * num2;
+                printf("Result: %.2lf\n", result);
+                break;
+            case 4:
+                if (num2 == 0)
+                    printf("Error: Division by zero!\n");
+                else {
+                    result = num1 / num2;
+                    printf("Result: %.2lf\n", result);
+                }
+                break;
+            default:
+                printf("Invalid option! Please try again.\n");
+        }
+    }
+
     return 0;
 }
+
+
